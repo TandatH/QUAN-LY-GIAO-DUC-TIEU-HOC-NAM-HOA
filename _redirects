@@ -1,0 +1,4 @@
+# Cloudflare Pages Redirects & SPA Fallback
+/login.html       /login        301
+/api/*            /api/:splat   200
+/*                /login.html   200

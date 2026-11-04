@@ -1,0 +1,23 @@
+{
+  "users": {
+    "N1tXsaexgfNlqjsanViPvEBXZxJ3": {
+      "email": "adminnamhoa@gmail.com",
+      "role": "admin",
+      "name": "Quản trị Nam Hòa",
+      "displayName": "Quản trị Nam Hòa",
+      "mustChangePassword": false,
+      "createdAt": 1785858883477,
+      "createdBy": "adminnamhoa@gmail.com",
+      "createdByUid": "N1tXsaexgfNlqjsanViPvEBXZxJ3",
+      "isInitialAdmin": true
+    }
+  },
+  "settings": {
+    "schoolName": "FMA Nam Hòa",
+    "schoolYear": "2026-2027",
+    "schoolYearKey": "2026_2027",
+    "semester": "hk1",
+    "legacyFinanceSchoolYear": "2026-2027",
+    "schemaVersion": 5
+  }
+}

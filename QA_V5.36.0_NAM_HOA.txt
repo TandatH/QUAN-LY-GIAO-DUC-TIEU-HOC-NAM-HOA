@@ -1,0 +1,22 @@
+FMA NAM HÒA 5.36.0 — KẾT QUẢ KIỂM TRA TĨNH
+Ngày kiểm tra: 21/10/2026
+
+PASS - Toàn bộ tệp JavaScript qua node --check.
+PASS - firebase-database.rules.json parse JSON hợp lệ.
+PASS - firebase-initial-data.json parse JSON hợp lệ.
+PASS - Không còn project ID, API key, database URL hoặc storageBucket của bản nguồn.
+PASS - js/app.js và index.html cùng dùng project fma-nam-hoa.
+PASS - Cloud Functions SDK không còn được import.
+PASS - Firebase Storage bị khóa trong feature flags và Storage Rules.
+PASS - Admin có quyền đọc danh sách users và dọn node scores legacy.
+PASS - Toàn bộ tệp từ mã nguồn hoàn chỉnh 5.36.0 đã có trong main1.
+PASS - Cloudflare Worker định tuyến đúng /login, route admin, giáo viên,
+       phụ huynh và các slug cũ về login.html; tệp không tồn tại vẫn trả 404.
+PASS - Máy chủ cục bộ trả 200 cho /, /login, /admin/hoc-sinh, js, css và DOCX.
+PASS - Trang /login render thành công bằng Microsoft Edge headless.
+PASS - Mở login.html qua file:// hiện đúng hướng dẫn dùng MO-TRANG-WEB.bat.
+
+CHƯA KIỂM TRA TRỰC TUYẾN
+- Đăng nhập thực tế và đọc/ghi Firebase cần domain triển khai được thêm vào
+  Authorized domains và cần Publish firebase-database.rules.json.
+- Không thử gửi Resend vì chức năng này là tùy chọn và cần RESEND_API_KEY riêng.

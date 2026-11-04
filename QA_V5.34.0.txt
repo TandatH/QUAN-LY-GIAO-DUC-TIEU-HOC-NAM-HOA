@@ -1,0 +1,20 @@
+SMART SCHOOL V5.34.0 — QA
+Ngày kiểm tra: 05/08/2026
+
+1. Kiểm tra cú pháp toàn bộ JavaScript: ĐẠT.
+2. Kiểm thử mẫu Excel tự động:
+{"ok":true,"cases":72,"commentBankSheets":"present","formulaScan":"passed"}
+3. Thống kê ngân hàng nhận xét:
+[Smart School V5.6] commentbank.js loaded
+{
+  "version": "5.6.0",
+  "subjectItems": 71,
+  "traitItems": 71,
+  "suggestions": 1532
+}
+4. Kiểm tra workbook:
+- Đủ sheet dữ liệu, NganHangNhanXet, HuongDan.
+- Công thức không có tham chiếu undefined.
+- Công thức dưới giới hạn 8192 ký tự.
+- Workbook bật tính toán tự động khi mở.
+- Đã kiểm tra tách cột môn học và năng lực đặc thù trùng tên.

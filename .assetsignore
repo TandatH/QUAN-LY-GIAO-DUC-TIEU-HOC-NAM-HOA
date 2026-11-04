@@ -1,0 +1,19 @@
+# Server/deployment files must not be published as browser-readable assets.
+worker.js
+wrangler.jsonc
+functions/
+.git/
+.gitignore
+.dev.vars*
+.env*
+.assetsignore
+.vscode/
+firebase-*
+local-server.mjs
+MO-TRANG-WEB.bat
+HUONG_DAN_RESEND.md
+HUONG_DAN_CAP_NHAT.md
+HUONG-DAN-FIREBASE-NAM-HOA.txt
+FIREBASE_SPARK_FREE.md
+RELEASE_NOTES*.md
+QA_*.txt

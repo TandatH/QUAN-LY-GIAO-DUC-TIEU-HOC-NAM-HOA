@@ -1,0 +1,51 @@
+FMA NAM HÒA — FIREBASE SPARK (MIỄN PHÍ)
+=========================================
+
+Phiên bản ứng dụng: Smart School 5.36.0
+Firebase project: fma-nam-hoa
+Admin email: adminnamhoa@gmail.com
+Admin UID: N1tXsaexgfNlqjsanViPvEBXZxJ3
+
+ĐÃ TÍCH HỢP
+- Đồng bộ toàn bộ mã và tính năng từ thư mục main hoàn chỉnh 5.36.0.
+- Giữ Firebase Authentication + Realtime Database của fma-nam-hoa.
+- Giữ cơ chế tự tạo hồ sơ admin đầu tiên theo đúng UID + email nêu trên.
+- Giữ phân quyền admin, giáo viên, giáo viên bộ môn và phụ huynh.
+- Tắt Firebase Cloud Functions và Cloud Storage để dự án tiếp tục ở gói Spark,
+  không yêu cầu liên kết thẻ/billing.
+- QR học sinh dùng liên kết nội bộ có đăng nhập; PDF/Word được tạo trên trình duyệt.
+- Tin tức vẫn đăng văn bản và đọc ảnh cũ; không upload ảnh mới lên Firebase Storage.
+
+MỞ TRÊN MÁY TÍNH
+1. Không bấm trực tiếp index.html hoặc login.html để sử dụng ứng dụng.
+2. Bấm đúp MO-TRANG-WEB.bat.
+3. Trình duyệt sẽ mở http://127.0.0.1:8123/login; nếu cổng bận, máy chủ tự chọn
+   cổng kế tiếp và mở đúng địa chỉ mới.
+4. Giữ cửa sổ "FMA Nam Hoa - May chu cuc bo" mở trong lúc sử dụng.
+5. Bấm Ctrl+C hoặc đóng cửa sổ đó khi muốn dừng.
+
+Lý do: ứng dụng dùng JavaScript ES modules và URL dạng /login, /admin/..., nên cần
+máy chủ web. Tệp local-server.mjs đi kèm đã xử lý đúng các đường dẫn này.
+
+THIẾT LẬP FIREBASE TRƯỚC KHI DEPLOY
+1. Firebase Console > Authentication > Sign-in method: bật Email/Password.
+2. Authentication > Users: bảo đảm có adminnamhoa@gmail.com với UID:
+   N1tXsaexgfNlqjsanViPvEBXZxJ3
+3. Realtime Database > Rules: dán firebase-database.rules.json rồi Publish.
+4. Không bắt buộc import dữ liệu: lần đăng nhập đầu ứng dụng tự tạo users/{UID}.
+   Nếu tự tạo không thành công, vào Realtime Database > Data > Import JSON và chọn
+   firebase-initial-data.json.
+5. Không cần tạo/deploy Firebase Storage hoặc Firebase Functions.
+6. Deploy thư mục này bằng Cloudflare Worker/Pages. wrangler.jsonc đã trỏ worker.js
+   và static assets, không cần Firebase Hosting.
+7. Authentication > Settings > Authorized domains: thêm domain triển khai mới.
+
+LƯU Ý GÓI MIỄN PHÍ
+- Realtime Database Spark: 100 kết nối đồng thời, 1 GB dữ liệu và 10 GB tải/tháng.
+- Vượt hạn mức của một sản phẩm trên Spark có thể làm sản phẩm đó ngừng phục vụ
+  đến chu kỳ tiếp theo; cần theo dõi tab Usage trong Firebase Console.
+- Không bật Test mode công khai. Luôn Publish rules đi kèm.
+- Email Resend qua Cloudflare là tùy chọn ngoài Firebase và mặc định chưa bật.
+- Xem FIREBASE_SPARK_FREE.md để biết chi tiết giới hạn và phần đã thay thế.
+
+CẬP NHẬT: 21/10/2026

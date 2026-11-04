@@ -1,0 +1,9 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      // Chế độ Firebase Spark: khóa Storage để không phụ thuộc Blaze/billing.
+      allow read, write: if false;
+    }
+  }
+}
