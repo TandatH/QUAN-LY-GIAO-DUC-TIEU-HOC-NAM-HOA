@@ -133,7 +133,7 @@
         /* ── HERO ── */
         .hero {
             background: linear-gradient(135deg, var(--navy) 0%, #1a3a6e 50%, #1a56db 100%);
-            padding: 60px 24px 80px;
+            padding: 50px 24px 50px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -174,143 +174,6 @@
             to   { opacity:1; transform:translateY(0); }
         }
 
-
-        /* ── FMA APP PORTAL ── */
-        .app-portal {
-            max-width: 1200px;
-            margin: -34px auto 0;
-            padding: 0 24px;
-            position: relative;
-            z-index: 5;
-        }
-
-        .app-portal-box {
-            background: rgba(255,255,255,0.98);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            box-shadow: 0 14px 40px rgba(15,32,68,0.12);
-            padding: 24px;
-        }
-
-        .app-portal-head {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            gap: 18px;
-            margin-bottom: 18px;
-        }
-
-        .app-portal-kicker {
-            color: var(--blue);
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            margin-bottom: 5px;
-        }
-
-        .app-portal-title {
-            font-family: 'Merriweather', Georgia, serif;
-            color: var(--navy);
-            font-size: 1.25rem;
-            font-weight: 900;
-        }
-
-        .app-portal-note {
-            color: var(--muted);
-            font-size: 0.82rem;
-            text-align: right;
-        }
-
-        .app-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 14px;
-        }
-
-        .app-link {
-            min-height: 106px;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 18px;
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            background: #fff;
-            color: var(--text);
-            text-decoration: none;
-            transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .app-link::after {
-            content: '\f061';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            position: absolute;
-            right: 16px;
-            top: 16px;
-            color: #94a3b8;
-            font-size: .82rem;
-            transition: transform .2s ease, color .2s ease;
-        }
-
-        .app-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 24px rgba(15,32,68,0.11);
-            border-color: #bfdbfe;
-        }
-
-        .app-link:hover::after {
-            transform: translateX(3px);
-            color: var(--blue);
-        }
-
-        .app-icon {
-            width: 48px;
-            height: 48px;
-            flex: 0 0 48px;
-            border-radius: 13px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.15rem;
-        }
-
-        .app-link.teacher .app-icon {
-            color: #1d4ed8;
-            background: #dbeafe;
-        }
-
-        .app-link.exam .app-icon {
-            color: #7c3aed;
-            background: #ede9fe;
-        }
-
-        .app-link.material .app-icon {
-            color: #047857;
-            background: #d1fae5;
-        }
-
-        .app-info {
-            min-width: 0;
-            padding-right: 22px;
-        }
-
-        .app-info strong {
-            display: block;
-            color: var(--navy);
-            font-size: .96rem;
-            margin-bottom: 5px;
-        }
-
-        .app-info span {
-            display: block;
-            color: var(--muted);
-            font-size: .78rem;
-            line-height: 1.45;
-        }
 
         /* ── MAIN CONTENT ── */
         .main-wrap {
@@ -650,11 +513,6 @@
             #detail-content { padding: 20px 18px 24px; }
             .detail-title { font-size:1.2rem; }
             .header-nav .nav-link { display:none; }
-            .app-portal { margin-top: -26px; padding: 0 16px; }
-            .app-portal-box { padding: 18px; }
-            .app-portal-head { align-items: flex-start; flex-direction: column; gap: 6px; }
-            .app-portal-note { text-align: left; }
-            .app-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -672,7 +530,6 @@
         </a>
         <nav class="header-nav">
             <a href="#" class="nav-link active"><i class="fas fa-newspaper" style="margin-right:5px"></i>Tin tức</a>
-            <a href="#ung-dung" class="nav-link"><i class="fas fa-th-large" style="margin-right:5px"></i>Ứng dụng</a>
             <a href="login.html" class="btn-login">
                 <i class="fas fa-sign-in-alt"></i> Đăng nhập TH
             </a>
@@ -691,51 +548,6 @@
     </div>
 </section>
 
-
-<!-- FMA APP PORTAL -->
-<section class="app-portal" id="ung-dung">
-    <div class="app-portal-box">
-        <div class="app-portal-head">
-            <div>
-                <div class="app-portal-kicker"><i class="fas fa-shapes" style="margin-right:6px"></i>Hệ sinh thái FMA</div>
-                <h2 class="app-portal-title">Truy cập nhanh các hệ thống</h2>
-            </div>
-            <div class="app-portal-note">Chọn hệ thống phù hợp để mở trang làm việc</div>
-        </div>
-
-        <div class="app-grid">
-            <a class="app-link teacher"
-               href="https://quanlygv.quanlytieuhoc-fma-tamha.site/"
-               target="_blank" rel="noopener noreferrer">
-                <div class="app-icon"><i class="fas fa-chalkboard-user"></i></div>
-                <div class="app-info">
-                    <strong>Quản lý giáo viên</strong>
-                    <span>Lịch dạy, chấm công, đánh giá, giáo viên thỉnh giảng và nghiệp vụ giáo viên.</span>
-                </div>
-            </a>
-
-            <a class="app-link exam"
-               href="https://kiemtra-tructuyen.quanlytieuhoc-fma-tamha.site/"
-               target="_blank" rel="noopener noreferrer">
-                <div class="app-icon"><i class="fas fa-file-circle-check"></i></div>
-                <div class="app-info">
-                    <strong>Kiểm tra trực tuyến</strong>
-                    <span>Tổ chức bài kiểm tra, làm bài trực tuyến và quản lý kết quả học sinh.</span>
-                </div>
-            </a>
-
-            <a class="app-link material"
-               href="https://hoclieuth-thcs.quanlytieuhoc-fma-tamha.site/"
-               target="_blank" rel="noopener noreferrer">
-                <div class="app-icon"><i class="fas fa-book-open-reader"></i></div>
-                <div class="app-info">
-                    <strong>Học liệu TH – THCS</strong>
-                    <span>Kho học liệu, tài nguyên giảng dạy và nội dung hỗ trợ học tập.</span>
-                </div>
-            </a>
-        </div>
-    </div>
-</section>
 
 <!-- MAIN -->
 <div class="main-wrap">

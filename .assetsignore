@@ -17,3 +17,6 @@ HUONG-DAN-FIREBASE-NAM-HOA.txt
 FIREBASE_SPARK_FREE.md
 RELEASE_NOTES*.md
 QA_*.txt
+*.bat
+*.ps1
+test_*.mjs

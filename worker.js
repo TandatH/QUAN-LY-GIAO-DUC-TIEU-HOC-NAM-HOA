@@ -306,6 +306,12 @@ export default {
 
     const pathname = url.pathname;
 
+    // Phục vụ trang chủ công khai: / hoặc /index.html trả về index.html (Tin tức & Sự kiện)
+    if (pathname === '/' || pathname === '/index.html') {
+      const indexHtmlUrl = new URL('/index.html', request.url);
+      return env.ASSETS.fetch(new Request(indexHtmlUrl, request));
+    }
+
     // Chuẩn hóa /login.html thành /login
     if (pathname === '/login.html') {
       url.pathname = '/login';
